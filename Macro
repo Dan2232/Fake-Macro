@@ -1,4 +1,4 @@
--- the key to enable speed is "Q" you hold it and boom speed
+-- the key to speed is "m" and then boom fast
 plr = game:GetService('Players').LocalPlayer
 down = true
  
@@ -17,10 +17,9 @@ function onButton1Up(mouse)
 end
  
 function onSelected(mouse)
-    mouse.KeyDown:connect(function(q) if q:lower()=="q"then onButton1Down(mouse)end end)
-    mouse.KeyUp:connect(function(q) if q:lower()=="q"then onButton1Up(mouse)end end)
+    mouse.KeyDown:connect(function(m) if m:lower()=="m"then onButton1Down(mouse)end end)
+    mouse.KeyUp:connect(function(m) if m:lower()=="m"then onButton1Up(mouse)end end)
 end
---// notification
 onSelected(game.Players.LocalPlayer:GetMouse())
 game.StarterGui:SetCore("SendNotification",{
 			Title = "Dan's macro";
